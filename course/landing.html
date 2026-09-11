@@ -1,0 +1,343 @@
+<title>Ламинирование.Курс</title>
+<meta name="description" content="Курс для лэш-мастеров: технология, консультирование, продажи. 11 модулей, практика на моделях, сертификат.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2A1C22;
+    --paper:#F3E9E6;
+    --paper-2:#ECDFDB;
+    --accent:#B4744A;
+    --accent-ink:#5B3418;
+    --accent-2:#2F5C4E;
+    --accent-2-ink:#173327;
+    --muted:#7C6A6C;
+    --line: rgba(42,28,34,.14);
+    --card: rgba(42,28,34,.035);
+    --shadow: 0 20px 45px -25px rgba(42,28,34,.35);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F3E9E6;
+      --paper:#20141A;
+      --paper-2:#2A1C22;
+      --accent:#E0A171;
+      --accent-ink:#2A1608;
+      --accent-2:#5FA98C;
+      --accent-2-ink:#0E2019;
+      --muted:#BFA9A8;
+      --line: rgba(243,233,230,.16);
+      --card: rgba(243,233,230,.05);
+      --shadow: 0 20px 45px -20px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F3E9E6;
+    --paper:#20141A;
+    --paper-2:#2A1C22;
+    --accent:#E0A171;
+    --accent-ink:#2A1608;
+    --accent-2:#5FA98C;
+    --accent-2-ink:#0E2019;
+    --muted:#BFA9A8;
+    --line: rgba(243,233,230,.16);
+    --card: rgba(243,233,230,.05);
+    --shadow: 0 20px 45px -20px rgba(0,0,0,.55);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Manrope", system-ui, sans-serif;
+    padding:0 20px;
+  }
+  .wrap{max-width:1040px;margin:0 auto;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:"Instrument Serif", Georgia, serif; font-weight:400; text-wrap:balance; margin:0;}
+  em{font-style:italic; color:var(--accent);}
+  .eyebrow{
+    font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted); font-weight:600;
+  }
+  .mono{font-family:"IBM Plex Mono", ui-monospace, monospace; font-variant-numeric:tabular-nums;}
+
+  header.top{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:22px; gap:16px; flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{font-family:"Instrument Serif", serif; font-size:1.3rem;}
+  nav.links{display:flex; gap:22px; font-size:.92rem; flex-wrap:wrap;}
+  nav.links a{text-decoration:none; opacity:.82;}
+  nav.links a:hover{opacity:1;}
+
+  .hero{
+    padding-block:64px 56px;
+    display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;
+  }
+  @media (max-width:760px){ .hero{grid-template-columns:1fr;} }
+  .hero h1{font-size:clamp(2.3rem, 5vw, 3.6rem); line-height:1.06;}
+  .hero p.lead{font-size:1.08rem; line-height:1.6; color:var(--muted); max-width:46ch; margin-top:18px;}
+  .cta-row{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:13px 22px; border-radius:999px; font-weight:700; font-size:.95rem;
+    text-decoration:none; border:1px solid transparent; cursor:pointer;
+  }
+  .btn-primary{background:var(--accent); color:var(--accent-ink);}
+  .btn-ghost{border-color:var(--line); color:var(--ink);}
+
+  .roller{width:100%; height:auto; display:block;}
+
+  .stat-row{display:flex; gap:28px; margin-top:36px; flex-wrap:wrap;}
+  .stat b{display:block; font-family:"Instrument Serif", serif; font-size:2rem;}
+  .stat span{font-size:.82rem; color:var(--muted);}
+
+  section{padding-block:56px; border-top:1px solid var(--line);}
+  .section-head{max-width:60ch; margin-bottom:34px;}
+  .section-head h2{font-size:clamp(1.8rem,3.4vw,2.4rem); margin-top:10px;}
+
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  @media (max-width:760px){ .grid-3{grid-template-columns:1fr;} }
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:18px;
+    padding:24px; display:flex; flex-direction:column; gap:10px;
+  }
+  .card h3{font-size:1.25rem;}
+  .card p{margin:0; color:var(--muted); font-size:.94rem; line-height:1.55;}
+
+  .outcomes{display:grid; gap:14px;}
+  .outcome{
+    display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:start;
+    padding:16px 0; border-bottom:1px solid var(--line);
+  }
+  .outcome:last-child{border-bottom:none;}
+  .outcome .num{font-family:"Instrument Serif", serif; font-size:1.5rem; color:var(--accent);}
+  .outcome p{margin:0; color:var(--muted); font-size:.95rem;}
+  .outcome strong{display:block; font-size:1.02rem; margin-bottom:2px;}
+
+  .timeline{display:grid; gap:0;}
+  .mod{
+    display:grid; grid-template-columns:64px 1fr; gap:20px;
+    padding-block:22px; border-top:1px solid var(--line);
+  }
+  .mod:first-child{border-top:none;}
+  .mod .idx{font-family:"IBM Plex Mono", monospace; color:var(--accent); font-size:1rem; padding-top:4px;}
+  .mod h3{font-size:1.18rem; margin-bottom:6px;}
+  .mod p{margin:0; color:var(--muted); font-size:.93rem; line-height:1.55; max-width:62ch;}
+
+  table.timing{width:100%; border-collapse:collapse; font-size:.92rem;}
+  table.timing th, table.timing td{
+    text-align:left; padding:10px 12px; border-bottom:1px solid var(--line);
+  }
+  table.timing th{color:var(--muted); font-weight:600; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;}
+  table.timing td.time{font-family:"IBM Plex Mono", monospace; white-space:nowrap;}
+  .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:16px; padding:6px 14px;}
+
+  .bonus-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  @media (max-width:760px){ .bonus-grid{grid-template-columns:1fr;} }
+  .bonus{
+    border:1px solid var(--line); border-radius:16px; padding:20px;
+    background:var(--card);
+  }
+  .bonus .eyebrow{color:var(--accent-2);}
+  .bonus h3{font-size:1.08rem; margin-top:6px;}
+  .bonus p{color:var(--muted); font-size:.92rem; margin:6px 0 0;}
+
+  .enroll{
+    background:var(--accent-2); color:var(--accent-2-ink);
+    border-radius:24px; padding:40px; display:grid; grid-template-columns:1.1fr .9fr; gap:32px;
+  }
+  @media (max-width:760px){ .enroll{grid-template-columns:1fr; padding:28px;} }
+  .enroll h2{color:inherit; font-size:clamp(1.7rem,3.2vw,2.2rem);}
+  .enroll p{color:inherit; opacity:.88; line-height:1.6;}
+  .enroll-box{
+    background:rgba(255,255,255,.14); border-radius:16px; padding:22px;
+    display:flex; flex-direction:column; gap:10px; font-size:.94rem;
+  }
+  .enroll-box .row{display:flex; justify-content:space-between; gap:10px; border-bottom:1px solid rgba(255,255,255,.25); padding-bottom:9px;}
+  .enroll-box .row:last-child{border-bottom:none; padding-bottom:0;}
+  .enroll-box .row b{font-family:"IBM Plex Mono", monospace; font-weight:500;}
+  .enroll .btn-primary{background:var(--paper); color:var(--ink); margin-top:6px;}
+
+  footer{padding-block:36px 50px; color:var(--muted); font-size:.85rem; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+</style>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">Ламинирование<em>.</em>Курс</div>
+    <nav class="links">
+      <a href="#audience">Для кого</a>
+      <a href="#program">Программа</a>
+      <a href="#format">Формат</a>
+      <a href="#bonuses">Бонусы</a>
+      <a href="#enroll">Запись</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="border-top:none;">
+    <div>
+      <p class="eyebrow">Курс для лэш-мастеров</p>
+      <h1>Ламинирование ресниц —<br>от анатомии до <em>очереди из клиентов</em></h1>
+      <p class="lead">11 модулей теории и практики на моделях: технология процедуры по таймингу,
+        работа с противопоказаниями, консультирование и продажи услуги. Заканчиваете курс
+        с портфолио «до/после» и сертификатом.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#enroll">Забронировать место</a>
+        <a class="btn btn-ghost" href="#program">Смотреть программу</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b class="mono">11</b><span>модулей курса</span></div>
+        <div class="stat"><b class="mono">45–60</b><span>минут на процедуру</span></div>
+        <div class="stat"><b class="mono">6–8</b><span>недель держится эффект</span></div>
+      </div>
+    </div>
+    <svg class="roller" viewBox="0 0 360 320" role="img" aria-label="Силиконовый валик с раскладкой ресниц">
+      <defs>
+        <linearGradient id="rollerGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="var(--accent)"/>
+          <stop offset="1" stop-color="var(--accent-2)"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="360" height="320" fill="none"/>
+      <ellipse cx="180" cy="160" rx="132" ry="132" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+      <path d="M 60 160 A 120 120 0 0 1 300 160" fill="none" stroke="url(#rollerGrad)" stroke-width="26" stroke-linecap="round"/>
+      <g stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity=".75">
+        <path d="M 70 150 q 10 -34 34 -40"/>
+        <path d="M 90 132 q 14 -30 38 -32"/>
+        <path d="M 116 116 q 16 -26 40 -24"/>
+        <path d="M 146 104 q 18 -20 42 -16"/>
+        <path d="M 178 98 q 20 -14 42 -6"/>
+        <path d="M 212 100 q 20 -8 40 4"/>
+        <path d="M 244 110 q 18 0 36 14"/>
+        <path d="M 272 128 q 14 8 28 24"/>
+        <path d="M 292 152 q 8 14 16 32"/>
+      </g>
+      <text x="180" y="270" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--muted)" letter-spacing="2">РАЗМЕР ВАЛИКА S · M · L · XL</text>
+    </svg>
+  </section>
+
+  <section id="audience">
+    <div class="section-head">
+      <p class="eyebrow">Для кого этот курс</p>
+      <h2>Три сценария, с которыми приходят на обучение</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Начинающий мастер</h3>
+        <p>Хотите добавить ламинирование в список услуг, но боитесь ошибиться у самого
+          чувствительного места на лице клиента — научим протоколу по шагам.</p>
+      </div>
+      <div class="card">
+        <h3>Мастер бровей/ресниц</h3>
+        <p>Уже работаете с клиентами, ищете апсейл к окрашиванию или коррекции бровей
+          без покупки дорогого оборудования.</p>
+      </div>
+      <div class="card">
+        <h3>Владелец студии</h3>
+        <p>Нужна программа обучения для найма и адаптации новых мастеров с единым
+          стандартом качества.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">Что вы получите</p>
+      <h2>Пять результатов к концу курса</h2>
+    </div>
+    <div class="outcomes">
+      <div class="outcome"><span class="num mono">01</span><div><strong>Уверенная техника</strong><p>Проводите процедуру для любого типа ресниц за 45–60 минут по эталонному протоколу.</p></div></div>
+      <div class="outcome"><span class="num mono">02</span><div><strong>Безопасная консультация</strong><p>Выявляете противопоказания и оформляете информированное согласие клиента.</p></div></div>
+      <div class="outcome"><span class="num mono">03</span><div><strong>Ценообразование</strong><p>Считаете себестоимость и назначаете цену, которая покрывает время и расходники.</p></div></div>
+      <div class="outcome"><span class="num mono">04</span><div><strong>Продвижение</strong><p>Знаете, что и как публиковать в соцсетях, чтобы заполнять запись на процедуру.</p></div></div>
+      <div class="outcome"><span class="num mono">05</span><div><strong>Портфолио и сертификат</strong><p>Заканчиваете курс с 5 фото «до/после» и подтверждённой квалификацией.</p></div></div>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="section-head">
+      <p class="eyebrow">Программа</p>
+      <h2>11 модулей — от анатомии до продаж</h2>
+    </div>
+    <div class="timeline">
+      <div class="mod"><span class="idx">00</span><div><h3>Введение и позиционирование</h3><p>Рынок услуги, портрет клиента, место процедуры в чеке мастера.</p></div></div>
+      <div class="mod"><span class="idx">01</span><div><h3>Анатомия и биология ресниц</h3><p>Фазы роста, структура кератина, показания и противопоказания.</p></div></div>
+      <div class="mod"><span class="idx">02</span><div><h3>Инструменты и материалы</h3><p>Валики, составы №1–№3, клей, расходники, организация рабочего места.</p></div></div>
+      <div class="mod"><span class="idx">03</span><div><h3>Консультация и подготовка</h3><p>Сбор анамнеза, информированное согласие, санитарные нормы.</p></div></div>
+      <div class="mod"><span class="idx">04</span><div><h3>Технология процедуры</h3><p>Пошаговый протокол с таймингами — от демакияжа до финишного ухода.</p></div></div>
+      <div class="mod"><span class="idx">05</span><div><h3>Разные типы ресниц</h3><p>Жёсткие, редкие, короткие, повреждённые — адаптация протокола.</p></div></div>
+      <div class="mod"><span class="idx">06</span><div><h3>Ламинирование + окрашивание</h3><p>Совместимость составов, подбор оттенка, безопасный тайминг.</p></div></div>
+      <div class="mod"><span class="idx">07</span><div><h3>Домашний уход</h3><p>Рекомендации клиенту и точка для повторной записи через 6–8 недель.</p></div></div>
+      <div class="mod"><span class="idx">08</span><div><h3>Ошибки и рекламации</h3><p>Топ-10 ошибок мастеров, алгоритм работы с жалобой, первая помощь.</p></div></div>
+      <div class="mod"><span class="idx">09</span><div><h3>Продвижение и продажи</h3><p>Ценообразование, контент для соцсетей, пакетные предложения.</p></div></div>
+      <div class="mod"><span class="idx">10</span><div><h3>Итоговая аттестация</h3><p>Тест, практический экзамен на модели, портфолио, сертификат.</p></div></div>
+    </div>
+  </section>
+
+  <section id="format">
+    <div class="section-head">
+      <p class="eyebrow">Модуль 4 крупным планом</p>
+      <h2>Протокол процедуры по минутам</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="timing">
+        <thead><tr><th>Этап</th><th>Действие</th><th>Время</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">1</td><td>Демакияж и обезжиривание ресниц</td><td class="time mono">3–5 мин</td></tr>
+          <tr><td class="mono">2</td><td>Приклеивание валика, подбор изгиба</td><td class="time mono">5 мин</td></tr>
+          <tr><td class="mono">3</td><td>Подъём и раскладка ресниц на валик</td><td class="time mono">7–10 мин</td></tr>
+          <tr><td class="mono">4</td><td>Состав №1 — фиксация формы</td><td class="time mono">8–12 мин</td></tr>
+          <tr><td class="mono">5</td><td>Снятие состава №1, промакивание</td><td class="time mono">2 мин</td></tr>
+          <tr><td class="mono">6</td><td>Состав №2 — питание/нейтрализация</td><td class="time mono">8–10 мин</td></tr>
+          <tr><td class="mono">7</td><td>Состав №3 — кератин</td><td class="time mono">5–8 мин</td></tr>
+          <tr><td class="mono">8</td><td>Окрашивание (опционально)</td><td class="time mono">8–10 мин</td></tr>
+          <tr><td class="mono">9</td><td>Снятие с валика, расчёсывание</td><td class="time mono">3–5 мин</td></tr>
+          <tr><td class="mono">10</td><td>Финишный уход</td><td class="time mono">2 мин</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="bonuses">
+    <div class="section-head">
+      <p class="eyebrow">Бонусные материалы</p>
+      <h2>Раздаточные документы, которые остаются у вас</h2>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus"><p class="eyebrow">Скрипт</p><h3>Консультация и возражения</h3><p>Готовые формулировки для сбора анамнеза и ответов на «а ресницы не выпадут?».</p></div>
+      <div class="bonus"><p class="eyebrow">Чек-листы</p><h3>До / во время / после</h3><p>Пошаговые списки для рабочего кейса и для памятки клиенту.</p></div>
+      <div class="bonus"><p class="eyebrow">Калькулятор</p><h3>Себестоимость и цена</h3><p>Формула расчёта чека по расходникам, времени и целевой прибыли.</p></div>
+      <div class="bonus"><p class="eyebrow">Контент-план</p><h3>4 недели публикаций</h3><p>Готовые темы постов и сторис для продвижения услуги в соцсетях.</p></div>
+    </div>
+  </section>
+
+  <section id="enroll" style="border-top:none;">
+    <div class="enroll">
+      <div>
+        <p class="eyebrow" style="color:inherit; opacity:.75;">Запись на поток</p>
+        <h2>Бронируем места группами по 6–8 человек</h2>
+        <p>Оставьте контакт удобным способом — пришлём программу, расписание ближайшего
+          потока и список моделей, которые понадобятся для практики.</p>
+        <a class="btn btn-primary" href="mailto:enroll@example.com?subject=Запись%20на%20курс%20по%20ламинированию%20ресниц">Написать организатору</a>
+      </div>
+      <div class="enroll-box">
+        <div class="row"><span>Длительность</span><b>5–7 дней интенсив</b></div>
+        <div class="row"><span>Группа</span><b>6–8 человек</b></div>
+        <div class="row"><span>Практика</span><b>2 модели на ученика</b></div>
+        <div class="row"><span>Итог</span><b>Сертификат</b></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Ламинирование.Курс — программа обучения для лэш-мастеров</span>
+    <span>Контакт для записи: замените на свой e-mail / мессенджер перед публикацией</span>
+  </footer>
+
+</div>
