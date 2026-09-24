@@ -1,0 +1,13 @@
+{
+  "name": "reels",
+  "private": true,
+  "scripts": {
+    "render": "remotion render src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "*",
+    "react": "*",
+    "react-dom": "*",
+    "remotion": "*"
+  }
+}
